@@ -4,10 +4,10 @@
 CC := gcc
 
 # Get the compiler flags from pkg-config for SDL2, SDL2_image, and SDL2_ttf
-CFLAGS := $(shell pkg-config --cflags sdl2 sdl2_ttf) -Wall -O2
+CFLAGS := $(shell pkg-config --cflags sdl2 SDL2_image sdl2_ttf) -Wall -O2
 
 # Get the linker flags from pkg-config for SDL2, SDL2_image, and SDL2_ttf
-LDFLAGS := $(shell pkg-config --libs sdl2 sdl2_ttf)
+LDFLAGS := $(shell pkg-config --libs sdl2 SDL2_image sdl2_ttf)
 
 # Source files
 SRCS := main.c
